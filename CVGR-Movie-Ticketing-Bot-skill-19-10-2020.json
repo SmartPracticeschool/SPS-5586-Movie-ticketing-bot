@@ -1,0 +1,977 @@
+{
+  "intents": [
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "OK"
+        },
+        {
+          "text": "OKAY"
+        }
+      ],
+      "description": "Different ways to greet the bot"
+    },
+    {
+      "intent": "otp",
+      "examples": [
+        {
+          "text": "12AB"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "price",
+      "examples": [
+        {
+          "text": "Cost of the ticket"
+        },
+        {
+          "text": "Price of the seat"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "seats",
+      "examples": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "6"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thankyou",
+      "examples": [
+        {
+          "text": "Great,Thanks"
+        },
+        {
+          "text": "Thanks!"
+        },
+        {
+          "text": "Thanks a lot"
+        },
+        {
+          "text": "Thanks to you so much"
+        },
+        {
+          "text": "Thank You"
+        }
+      ],
+      "description": "Thank the bot for accomplishing the task"
+    },
+    {
+      "intent": "time",
+      "examples": [
+        {
+          "text": "01:00 PM"
+        },
+        {
+          "text": "07:00 PM"
+        },
+        {
+          "text": "10:00 AM"
+        },
+        {
+          "text": "10:00 PM"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "cities",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Hyderabad",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Karimnagar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Warangal",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "movie",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Avengers-ENGLISH",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dil Bechara-HINDI",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "KGF-KANNADA",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kotha Janta-TELUGU",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Robo 2.0-TAMIL",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cash",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "price",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "5",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "6",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_5_1602600013664",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Kotha Janta-TELUGU",
+            "source": "http://2.bp.blogspot.com/-DEfZTqij15U/U0qaabHlpAI/AAAAAAACjDE/mR0QlqLtGA4/s1600/Kotha_janta_movie_audio_release_posters(1).jpg",
+            "response_type": "image"
+          },
+          {
+            "title": "Select City:",
+            "options": [
+              {
+                "label": "Warangal",
+                "value": {
+                  "input": {
+                    "text": "Warangal"
+                  }
+                }
+              },
+              {
+                "label": "Hyderabad",
+                "value": {
+                  "input": {
+                    "text": "Hyderabad"
+                  }
+                }
+              },
+              {
+                "label": "Karimnagar",
+                "value": {
+                  "input": {
+                    "text": "Karimnagar"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@movie:(Kotha Janta-TELUGU)",
+      "dialog_node": "node_1_1603037525461",
+      "previous_sibling": "node_4_1603037844243"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay, Enter your mobile number:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#time",
+      "dialog_node": "node_2_1602776943010",
+      "previous_sibling": "node_7_1602776770761"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Robo 2.0-TAMIL",
+            "source": "https://www.filmibeat.com/fanimg/214x100x267/fan_images/movie/14976/2-0-photos-images-63344.jpeg",
+            "response_type": "image"
+          },
+          {
+            "title": "Select City:",
+            "options": [
+              {
+                "label": "Warangal",
+                "value": {
+                  "input": {
+                    "text": "Warangal"
+                  }
+                }
+              },
+              {
+                "label": "Hyderabad",
+                "value": {
+                  "input": {
+                    "text": "Hyderabad"
+                  }
+                }
+              },
+              {
+                "label": "Karimnagar",
+                "value": {
+                  "input": {
+                    "text": "Karimnagar"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@movie:(Robo 2.0-TAMIL)",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1603037636448",
+      "previous_sibling": "node_4_1602776508115"
+    },
+    {
+      "type": "standard",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1603038593418"
+      },
+      "conditions": "@price",
+      "digress_in": "returns",
+      "dialog_node": "node_2_1603038206940",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_5_1602945732915"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "KGF-KANNADA",
+            "source": "https://1.bp.blogspot.com/-IY58zj2mjkw/X2BLA3X-LGI/AAAAAAAAFzA/-ZjVdrAOBHoEcvkA_RJEoJwpom_3u4ERQCLcBGAsYHQ/w213-h320/PicsArt_09-15-10.31.53.jpg",
+            "response_type": "image"
+          },
+          {
+            "title": "Select City:",
+            "options": [
+              {
+                "label": "Warangal",
+                "value": {
+                  "input": {
+                    "text": "Warangal"
+                  }
+                }
+              },
+              {
+                "label": "Hyderabad",
+                "value": {
+                  "input": {
+                    "text": "Hyderabad"
+                  }
+                }
+              },
+              {
+                "label": "Karimnagar",
+                "value": {
+                  "input": {
+                    "text": "Karimnagar"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@movie:(KGF-KANNADA)",
+      "dialog_node": "node_3_1603037765559",
+      "previous_sibling": "node_2_1603037636448"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Avengers-ENGLISH",
+            "source": "https://freepngimg.com/thumb/avengers/3-2-avengers-png-image-thumb.png",
+            "response_type": "image"
+          },
+          {
+            "title": "Select City:",
+            "options": [
+              {
+                "label": "Warangal",
+                "value": {
+                  "input": {
+                    "text": "Warangal"
+                  }
+                }
+              },
+              {
+                "label": "Hyderabad",
+                "value": {
+                  "input": {
+                    "text": "Hyderabad"
+                  }
+                }
+              },
+              {
+                "label": "Karimnagar",
+                "value": {
+                  "input": {
+                    "text": "Karimnagar"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@movie:(Avengers-ENGLISH)",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1602776508115",
+      "previous_sibling": "node_9_1602599787216"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Dil Bechara-HINDI",
+            "source": "https://spiderimg.amarujala.com/assets/images/2020/06/25/750x506/l-b_1593080440.jpeg",
+            "response_type": "image"
+          },
+          {
+            "title": "Select City:",
+            "options": [
+              {
+                "label": "Warangal",
+                "value": {
+                  "input": {
+                    "text": "Warangal"
+                  }
+                }
+              },
+              {
+                "label": "Hyderabad",
+                "value": {
+                  "input": {
+                    "text": "Hyderabad"
+                  }
+                }
+              },
+              {
+                "label": "Karimnagar",
+                "value": {
+                  "input": {
+                    "text": "Karimnagar"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@movie:(Dil Bechara-HINDI)",
+      "dialog_node": "node_4_1603037844243",
+      "previous_sibling": "node_3_1603037765559"
+    },
+    {
+      "type": "standard",
+      "title": "Thank You",
+      "output": {
+        "generic": [
+          {
+            "title": "Emoji:",
+            "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSte8o3d8fFCsrGOsdH6gQWhQCIhmS8yj9ziQ&usqp=CAU",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "#thankyou",
+      "dialog_node": "node_5_1602600013664",
+      "previous_sibling": "node_8_1603039409877"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is your payment mode?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#otp",
+      "dialog_node": "node_5_1602777052428",
+      "previous_sibling": "node_5_1603039248558"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Choose the number of Seats required:",
+            "options": [
+              {
+                "label": "1",
+                "value": {
+                  "input": {
+                    "text": "1"
+                  }
+                }
+              },
+              {
+                "label": "2",
+                "value": {
+                  "input": {
+                    "text": "2"
+                  }
+                }
+              },
+              {
+                "label": "3",
+                "value": {
+                  "input": {
+                    "text": "3"
+                  }
+                }
+              },
+              {
+                "label": "4",
+                "value": {
+                  "input": {
+                    "text": "4"
+                  }
+                }
+              },
+              {
+                "label": "5",
+                "value": {
+                  "input": {
+                    "text": "5"
+                  }
+                }
+              },
+              {
+                "label": "6",
+                "value": {
+                  "input": {
+                    "text": "6"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@cities",
+      "dialog_node": "node_5_1602945732915",
+      "previous_sibling": "node_1_1603037525461"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "OTP is sent to mobile number. Enter OTP:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_5_1603039248558",
+      "previous_sibling": "node_2_1602776943010"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Show timings are:",
+            "options": [
+              {
+                "label": "10:00 AM",
+                "value": {
+                  "input": {
+                    "text": "10:00 AM"
+                  }
+                }
+              },
+              {
+                "label": "01:00 PM",
+                "value": {
+                  "input": {
+                    "text": "01:00 PM"
+                  }
+                }
+              },
+              {
+                "label": "07:00 PM",
+                "value": {
+                  "input": {
+                    "text": "07:00 PM"
+                  }
+                }
+              },
+              {
+                "label": "10:00 PM",
+                "value": {
+                  "input": {
+                    "text": "10:00 PM"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "@sys-date",
+      "dialog_node": "node_7_1602776770761",
+      "previous_sibling": "node_9_1603038593418"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ticket details are sent to your mobile. Complete the payment and book your slots. Thank you  for using our service. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@payment",
+      "dialog_node": "node_8_1603039409877",
+      "previous_sibling": "node_5_1602777052428"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "output": {
+        "generic": [
+          {
+            "title": "Choose a Movie from the list:",
+            "options": [
+              {
+                "label": "Kotha Janta-TELUGU",
+                "value": {
+                  "input": {
+                    "text": "Kotha Janta-TELUGU"
+                  }
+                }
+              },
+              {
+                "label": "Avengers-ENGLISH",
+                "value": {
+                  "input": {
+                    "text": "Avengers-ENGLISH"
+                  }
+                }
+              },
+              {
+                "label": "Robo-TAMIL",
+                "value": {
+                  "input": {
+                    "text": "Robo-TAMIL"
+                  }
+                }
+              },
+              {
+                "label": "KGF-KANNADA",
+                "value": {
+                  "input": {
+                    "text": "KGF-KANNADA"
+                  }
+                }
+              },
+              {
+                "label": "Dil Bechara-HINDI",
+                "value": {
+                  "input": {
+                    "text": "Dil Bechara-HINDI"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#greeting",
+      "dialog_node": "node_9_1602599787216",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Enter the date you want to watch:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#seats",
+      "dialog_node": "node_9_1603038593418",
+      "previous_sibling": "node_2_1603038206940"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602945732915",
+      "disabled": true,
+      "conditions": "",
+      "dialog_node": "response_4_1602945819693"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cost of your 4 tickets is Rs. 800=00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603038206940",
+      "conditions": "@price:(4)",
+      "dialog_node": "response_4_1603038420554",
+      "previous_sibling": "response_5_1603038387668"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cost of your 2 tickets is  Rs. 400=00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603038206940",
+      "conditions": "@price:(2)",
+      "dialog_node": "response_5_1603038355236",
+      "previous_sibling": "response_7_1603038313173"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cost of your 3 tickets is Rs. 600=00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603038206940",
+      "conditions": "@price:(3)",
+      "dialog_node": "response_5_1603038387668",
+      "previous_sibling": "response_5_1603038355236"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cost of your 6 tickets is Rs.1200"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603038206940",
+      "conditions": "@price:(6)",
+      "dialog_node": "response_5_1603038478450",
+      "previous_sibling": "response_8_1603038448498"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cost of your ticket is Rs. 200=00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603038206940",
+      "conditions": "@price:(1)",
+      "dialog_node": "response_7_1603038313173"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cost of your 5 tickets is Rs. 1000=00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603038206940",
+      "conditions": "@price:(5)",
+      "dialog_node": "response_8_1603038448498",
+      "previous_sibling": "response_4_1603038420554"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello! I am here to help you book movie tickets."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
