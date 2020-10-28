@@ -22,17 +22,17 @@ This repository is to present the development of a project-build-a-thon Movie ti
 
 ##__Login onto IBM Cloud Academic Initiative account__ 
 
-![IBM Cloud Login Page](./Images/CVGR-MTB-WA-Image-44-22-10-20.png)
+![IBM Cloud Login Page](./CVGR-MTB-WA-Image-44-22-10-20.png)
 
 An IBM Cloud account - A lite account, which is granted for the purpose of project-build-a-thon, is being created at IBM Cloud    
 
-![IBM Cloud Login Page - User name](./Images/CVGR-MTB-WA-Image-46-22-10-20.png)  
+![IBM Cloud Login Page - User name](./CVGR-MTB-WA-Image-46-22-10-20.png)  
 
 ##__Create Watson Assistant service__  
 
 1.Select Catalog found at the top right of the page
 
-![IBM Cloud Dashboard](./Images/CVGR-MTB-WA-Image-1-20-10-20.png)
+![IBM Cloud Dashboard](./CVGR-MTB-WA-Image-1-20-10-20.png)
 
 2.Click on Watson from the list of Platform services  
 
@@ -40,7 +40,7 @@ An IBM Cloud account - A lite account, which is granted for the purpose of proje
 
 4.Watson Assistant service main page is created. Click on Launch tool  
 
-![Watson Assistant](./Images/CVGR-MTB-WA-Image-3-19-10-20.png)
+![Watson Assistant](./CVGR-MTB-WA-Image-3-19-10-20.png)
 
 ##__Create Workspace__  
 
@@ -48,11 +48,11 @@ An IBM Cloud account - A lite account, which is granted for the purpose of proje
 
 2.Click on Create assistants to Create a new workspace named Movie ticketing Bot  
 
-![My First Assistant](./Images/CVGR-MTB-WA-Image-45-19-10-20.png)
+![My First Assistant](./CVGR-MTB-WA-Image-45-19-10-20.png)
 
 3.This will open the workspace. Where the Intents, Entities and Dialog are defined  
 
-![My first skill](./Images/CVGR-MTB-WA-Image-26-19-10-20.png)
+![My first skill](./CVGR-MTB-WA-Image-26-19-10-20.png)
 
 ##__Define Intents__
 
@@ -62,7 +62,7 @@ An IBM Cloud account - A lite account, which is granted for the purpose of proje
 
 3.Under Add user examples, add the utterances that are expected to be mentioned based on the intent and click on Add example  
 
-![Intents](./Images/CVGR-MTB-WA-Image-5-19-10-20.png)
+![Intents](./CVGR-MTB-WA-Image-5-19-10-20.png)
 
 ##__Define Entities__
 
@@ -72,11 +72,11 @@ An IBM Cloud account - A lite account, which is granted for the purpose of proje
 
 3.Add the Value name and its corresponding Synonyms and click on Add value  
 
-![Entities](./Images/CVGR-MTB-WA-Image-6-19-10-20.png)
+![Entities](./CVGR-MTB-WA-Image-6-19-10-20.png)
 
 4.Under System entities enable sys-date and sys-number 
 
-![System Entities](./Images/CVGR-MTB-WA-Image-7-19-10-20.png)
+![System Entities](./CVGR-MTB-WA-Image-7-19-10-20.png)
 
 ##__Define Dialog Flow__
 
@@ -108,68 +108,68 @@ An IBM Cloud account - A lite account, which is granted for the purpose of proje
 
 14.Then again, Create a new node and call it Thank You, whcih acknowledges with an emoji image when #thankyou is detected  
 
-![Dialog](./Images/CVGR-MTB-WA-Image-8-19-10-20.png)
+![Dialog](./CVGR-MTB-WA-Image-8-19-10-20.png)
 
-![Dialog](./Images/CVGR-MTB-WA-Image-9-19-10-20.png)
+![Dialog](./CVGR-MTB-WA-Image-9-19-10-20.png)
 
-![Dialog](./Images/CVGR-MTB-WA-Image-10-19-10-20.png)  
+![Dialog](./CVGR-MTB-WA-Image-10-19-10-20.png)  
 
-![Dialog](./Images/CVGR-MTB-WA-Image-11-19-10-20.png)  
+![Dialog](./CVGR-MTB-WA-Image-11-19-10-20.png)  
 
-![Dialog](./Images/CVGR-MTB-WA-Image-12-19-10-20.png)
+![Dialog](./CVGR-MTB-WA-Image-12-19-10-20.png)
 
 ##__Try Out steps of Movie Ticketing Bot__
 
 15.Finally, Try out is succesfully used to verify  the desired result as shown below in the steps lited.  
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-47-23-10-20.png)
+![Try out Screen](./CVGR-MTB-WA-Image-47-23-10-20.png)
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-48-23-10-20.png)  
+![Try out Screen](./CVGR-MTB-WA-Image-48-23-10-20.png)  
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-49-23-10-20.png)  
+![Try out Screen](./CVGR-MTB-WA-Image-49-23-10-20.png)  
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-50-23-10-20.png)  
+![Try out Screen](./CVGR-MTB-WA-Image-50-23-10-20.png)  
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-51-23-10-20.png)
+![Try out Screen](./CVGR-MTB-WA-Image-51-23-10-20.png)
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-52-23-10-20.png)  
+![Try out Screen](./CVGR-MTB-WA-Image-52-23-10-20.png)  
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-53-23-10-20.png)  
+![Try out Screen](./CVGR-MTB-WA-Image-53-23-10-20.png)  
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-54-23-10-20.png)  
+![Try out Screen](./CVGR-MTB-WA-Image-54-23-10-20.png)  
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-55-23-10-20.png)
+![Try out Screen](./CVGR-MTB-WA-Image-55-23-10-20.png)
 
-![Try out Screen](./Images/CVGR-MTB-WA-Image-56-23-10-20.png)
+![Try out Screen](./CVGR-MTB-WA-Image-56-23-10-20.png)
 
 16.From the My first assiatant screen click the preview link and the Assistant preview is opened in a seperate browser  
 
-![Skill Integration](./Images/CVGR-MTB-WA-Image-26-19-10-20.png)
+![Skill Integration](./CVGR-MTB-WA-Image-26-19-10-20.png)
 
-![Creation of Preview Link](./Images/CVGR-MTB-WA-Image-27-19-10-20.png)  
+![Creation of Preview Link](./CVGR-MTB-WA-Image-27-19-10-20.png)  
 
 
 [Watson Assistant Generated url to Create GUI](https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=593d9d3c-0b77-49f7-bfc8-78fae57849f4&serviceInstanceID=2bb06dd0-a74d-45c1-931e-a3389d82c4a6 "url creted")
 
 17.The bot greets the bookee and waits the input  
 
-![url](./Images/CVGR-MTB-WA-Image-28-19-10-20.png)
+![url](./CVGR-MTB-WA-Image-28-19-10-20.png)
 
 18.When the greeting is reciprocated, the bot responds with list of movies available  
 
-![Movie List](./Images/CVGR-MTB-WA-Image-30-19-10-20.png)
+![Movie List](./CVGR-MTB-WA-Image-30-19-10-20.png)
 
 19.For a choosen movie an image is displayed and also displays a City to be selected  
 
-![City choice](./Images/CVGR-MTB-WA-Image-32-19-10-20.png)
+![City choice](./CVGR-MTB-WA-Image-32-19-10-20.png)
 
 20.Upon selecting the city the bot responds to capture the number of seats required to book. In response to the capture of number of seats required to be booked the bot displays the price of seats requested and waits for the date on which the movie tickets are to be booked  
 
-![Number of Seats](./Images/CVGR-MTB-WA-Image-33-19-10-20.png)
+![Number of Seats](./CVGR-MTB-WA-Image-33-19-10-20.png)
 
 21.On accepting the date the bot reponds to enter mobile number  
 
-![Mobile number](./Images/CVGR-MTB-WA-Image-34-19-10-20.png)
+![Mobile number](./CVGR-MTB-WA-Image-34-19-10-20.png)
 
 22.When the bookee enters the mobile number the bot sends an OTP to the mobile number  
 
@@ -177,33 +177,33 @@ An IBM Cloud account - A lite account, which is granted for the purpose of proje
 
 24.When the payment mode is updated a message is sent to complete the payment and book the slots  
 
-![OTP, Payment mode](./Images/CVGR-MTB-WA-Image-35-19-10-20.png)
+![OTP, Payment mode](./CVGR-MTB-WA-Image-35-19-10-20.png)
 
 25.Finally, bot responds with an emoji for the service it rendered  
 
-![Emoji](./Images/CVGR-MTB-WA-Image-36-19-10-20.png)
+![Emoji](./CVGR-MTB-WA-Image-36-19-10-20.png)
 
 26.From the resources page of the IBM cloud Open Node Red apllication page  
 
-![Node Red](./Images/CVGR-MTB-WA-Image-36a-20-10-20.png)
+![Node Red](./CVGR-MTB-WA-Image-36a-20-10-20.png)
 
 27.Node Red application details page opened and in this page click Create under Cloud Foundry Apps  
 
-![Node Red App](./Images/CVGR-MTB-WA-Image-37-19-10-20.png)
+![Node Red App](./CVGR-MTB-WA-Image-37-19-10-20.png)
 
 28.Node Red Application is opened and it contained visit url link. Click on this link to open the Node Red page after going through the settings needed  
 
-![Node Red url](./Images/CVGR-MTB-WA-Image-38-19-10-20.png)
+![Node Red url](./CVGR-MTB-WA-Image-38-19-10-20.png)
 
 29.A flow is loaded into Node Red and configured to accept the input from bot  
 
-![Node Red Flow](./Images/CVGR-MTB-NRed-Image-42-20-10-20.png)
+![Node Red Flow](./CVGR-MTB-NRed-Image-42-20-10-20.png)
 
 30.Open UI of the Node Red  
 
 31.Enter the interaction and observe the responses  
 
-![Node Red Flow](./Images/CVGR-MTB-NRed-Image-43-20-10-20.png)
+![Node Red Flow](./CVGR-MTB-NRed-Image-43-20-10-20.png)
 
 32.Finally, the bot is verified to be able to book movie tickets successfully
 
