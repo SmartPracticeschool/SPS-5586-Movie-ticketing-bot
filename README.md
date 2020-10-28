@@ -203,7 +203,7 @@ An IBM Cloud account - A lite account, which is granted for the purpose of proje
 
 31.Enter the interaction and observe the responses  
 
-![UI Interaction](./CVGR-MTB-NRed-Image-43-20-10-20.png)
+![Node UI Interaction](./CVGR-MTB-NRed-Image-43-20-10-20.png)
 
 32.Finally, the bot is verified to be able to book movie tickets successfully
 
